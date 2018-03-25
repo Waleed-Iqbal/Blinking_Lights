@@ -29,13 +29,14 @@ h2 {
 #wire li {
     padding: 0;
     width: 15px;
-    top: 102px;
-    height: 30px;
+    top: 107px;
+    height: 35px;
     margin: 0 15px;
     list-style: none;
     border-radius: 50%;
     position: relative;
     display: inline-block;
+
     animation-duration: 1s;
     animation-fill-mode: both;
     background-color: white;
@@ -47,26 +48,37 @@ h2 {
     animation-name: odd-flash;
 }
 
+#wire li:before {
+    left: 0;
+    top: -5px;
+    content: "";
+    width: 14px;
+    height: 10px;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #444444;
+}
+
 @keyframes even-flash {
     0%,
     100% {
         background-color: rgba(255, 230, 65, 1);
-        box-shadow: 0 2px 20px 4px rgba(255, 230, 65, 1);
+        box-shadow: 2px 2px 20px 4px rgba(255, 230, 65, 1);
     }
     50% {
         background-color: rgba(255, 230, 65, 0.5);
-        box-shadow: 0 2px 20px 4px rgba(255, 230, 65, 0.3);
+        box-shadow: 2px 2px 20px 4px rgba(255, 230, 65, 0.3);
     }
 }
 
 @keyframes odd-flash {
     50% {
         background-color: rgba(255, 65, 185, 1);
-        box-shadow: 0 2px 20px 4px rgba(255, 65, 185, 1);
+        box-shadow: 2px 2px 20px 4px rgba(255, 65, 185, 1);
     }
     0%,
     100% {
         background-color: rgba(255, 65, 185, 0.5);
-        box-shadow: 0 2px 20px 4px rgba(255, 65, 185, 0.3);
+        box-shadow: 2px 2px 20px 4px rgba(255, 65, 185, 0.3);
     }
 }
